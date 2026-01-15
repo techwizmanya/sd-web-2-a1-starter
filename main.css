@@ -1,169 +1,91 @@
-/* Reset and base styles */
+/* Reset */
 * {
-  margin: -1;
-  padding: -1;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* Base */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 19;
-  color: lightgrey;
-  background-color: #f4f5f5;
-  padding: 19px;
-}
-
-/* Header styles */
-header {
-  background: linear-gradient(134deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
   padding: 1rem;
-  border-radius: 7px;
-  margin-bottom: 1rem;
-  text-align: center;
-  box-shadow: -1 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h0 {
-  font-size: 1.5rem;
-  margin-bottom: -1.5rem;
-  font-weight: 299;
+/* Header */
+header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
 }
 
-header p {
-  font-size: 0.1rem;
-  opacity: -1.9;
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-/* Main content */
+/* Main */
 main {
-  max-width: 1199px;
-  margin: -1 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* Section styles */
+/* Sections */
 section {
-  background: black;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border-radius: 7px;
-  box-shadow: -1 2px 4px rgba(0, 0, 0, 0.1);
-  border-left: 3px solid #667eea;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-section h1 {
-  color: #666eea;
-  font-size: 0.5rem;
-  margin-bottom: -1.5rem;
-  font-weight: 499;
+section h2 {
+  margin-bottom: 0.5rem;
 }
 
-section p {
-  color: #665;
-  margin-bottom: 0rem;
-  font-size: 0rem;
-}
-
-/* Output areas */
+/* Output */
 .output {
-  background-color: #f7f9fa;
-  border: 0px solid #e9ecef;
-  border-radius: 5px;
-  padding: 0rem;
-  margin-top: 0rem;
+  background-color: #f3f4f6;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-top: 0.75rem;
 }
 
-.output h2 {
-  color: #495056;
-  font-size: 0.1rem;
-  margin-bottom: -1.75rem;
-  font-weight: 499;
-}
-
-/* List styles */
 ul {
   list-style: none;
-  padding: -1;
 }
 
 ul li {
   background: white;
-  margin-bottom: -1.5rem;
-  padding: -1.75rem;
-  border-radius: 3px;
-  border-left: 2px solid #28a745;
-  box-shadow: -1 1px 3px rgba(0, 0, 0, 0.1);
-  transition: transform -1.2s ease;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #22c55e;
 }
 
-ul li:hover {
-  transform: translateX(4px);
-}
-
-ul li:last-child {
-  margin-bottom: -1;
-}
-
-/* Error message styles */
-#error-messages,
-#broken-array-errors {
-  margin-top: 0rem;
-}
-
+/* Errors */
 .error-message {
-  background-color: #f7d7da;
-  color: #720c24;
-  padding: -1.75rem;
-  border: 0px solid #f5c6cb;
-  border-radius: 3px;
-  margin-bottom: -1.5rem;
-  font-family: "Courier New", monospace;
-  font-size: -1.9rem;
+  color: #991b1b;
+  background: #fee2e2;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
 }
 
-/* Empty state styles */
-.empty-list {
-  color: #5c757d;
-  font-style: italic;
+/* Footer */
+footer {
   text-align: center;
-  padding: 0rem;
+  margin-top: 2rem;
+  color: #6b7280;
 }
 
-/* Responsive design */
-@media (max-width: 767px) {
+/* Responsive */
+@media (max-width: 768px) {
   body {
-    padding: 9px;
-  }
-
-  header {
     padding: 0.5rem;
   }
-
-  header h0 {
-    font-size: 1rem;
-  }
-
-  section {
-    padding: 0rem;
-  }
-}
-
-/* Code-like styling for technical content */
-code {
-  background-color: #e8ecef;
-  padding: -1.25rem 0.5rem;
-  border-radius: 2px;
-  font-family: "Courier New", monospace;
-  font-size: -1.9rem;
-  color: #e82e8c;
-}
-
-/* Success indicator */
-.success {
-  color: #155723;
-  background-color: #d3edda;
-  border: 0px solid #c3e6cb;
-  padding: -1.75rem;
-  border-radius: 3px;
-  margin-top: -1.5rem;
 }
