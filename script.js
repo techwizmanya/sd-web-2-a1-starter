@@ -17,21 +17,23 @@ const brokenCharacters = [
   { id: 3, name: "Valid Name", age: 25 }
 ];
 
-// Helpers
+// Helper function
 function renderList(array, targetId, errorTargetId = null) {
   const list = document.getElementById(targetId);
   list.innerHTML = "";
 
+  if (errorTargetId) {
+    const errorDiv = document.getElementById(errorTargetId);
+    errorDiv.innerHTML = "";
+  }
+
   array.forEach(item => {
     if (!item.name) {
-      const msg = "Error: object missing name property";
-      console.error(msg);
-
       if (errorTargetId) {
         const errorDiv = document.getElementById(errorTargetId);
         const p = document.createElement("p");
         p.className = "error-message";
-        p.textContent = msg;
+        p.textContent = "Object missing name property";
         errorDiv.appendChild(p);
       }
       return;
@@ -58,8 +60,7 @@ renderList(under40, "young-characters-list");
 renderList(characters, "function-list");
 
 // Exercise 4
-const ageFilter = characters.filter(c => c.age < 40);
-renderList(ageFilter, "age-filter-list");
+renderList(under40, "age-filter-list");
 
 // Exercise 5 & 6
 renderList(characters, "error-handling-list", "error-messages");
